@@ -1,0 +1,14 @@
+{% extends 'default.html.twig' %}
+
+{% block contenido %}
+    <h1>Encuestas</h1>
+    {% if encuestas is not empty %}
+        <ul>
+            {% for encuesta in encuestas %}
+                <li><a href="{{ path('encuesta', {'id': encuesta.id}) }}">{{ encuesta.nombre }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay encuestas.</p>
+    {% endif %}
+{% endblock %}

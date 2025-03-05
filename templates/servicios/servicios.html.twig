@@ -1,0 +1,25 @@
+{% extends 'default.html.twig' %}
+
+{% block contenido %}
+
+    <h1>Servicios</h1>
+    {% if not servicio is defined %}
+        <ul>
+            {% for servicio in servicios %}
+                <li><a href="{{ path('verservicio', {'id': servicio.id}) }}">{{ servicio.nombre }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {% if textos is empty %}
+            <p>No hay textos para este servicio.</p>
+        {% else %}
+            <ul style="list-style-type: none; padding: 0;"> 
+                {% for texto in textos %}
+                    <li>{{ texto.texto | raw }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    <a href="{{ path('servicios') }}">Volver a la lista de servicios</a>
+    {% endif %}
+
+{% endblock %}

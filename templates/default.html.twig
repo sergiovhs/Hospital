@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Web site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="Web site" />
+    <meta name="description" content="Site description here" />
+    <meta name="keywords" content="keywords here" />
+    <meta name="language" content="en" />
+    <meta name="subject" content="Site subject here" />
+    <meta name="robots" content="All" />
+    <meta name="copyright" content="Your company" />
+    <meta name="abstract" content="Site description here" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" />
+  </head>
+  <body> 
+    <div id="wrapper"> 
+      <div id="bg"> 
+        <div id="header"></div>  
+        <div id="page"> 
+          <div id="container"> 
+            <!-- banner -->  
+            <div id="banner"></div>  
+            <!-- end banner -->  
+            <!-- horizontal navigation -->  
+            <div id="nav1"> 
+              <ul>
+                {% block menu %}
+                  {{ render(controller('App\\Controller\\MenuController::menu')) }}
+                {% endblock %}
+              </ul> 
+            </div>  
+            <!-- end horizontal navigation -->  
+            <!--  content -->  
+            <div id="content" style="margin-top: 100px;"> 
+                {% block contenido %}
+                  <h1>Bienvenido a nuestro hospital</h1>
+                  <p>
+                  En nuestro hospital, nos dedicamos a proporcionar la mejor atención médica posible a nuestros pacientes. Nuestro equipo de profesionales está aquí para ayudarle con todas sus necesidades de salud.
+                  </p>
+                  <p>
+                  Ofrecemos una amplia gama de servicios médicos, desde consultas generales hasta tratamientos especializados. Nuestro objetivo es garantizar su bienestar y recuperación.
+                  </p>
+                  <p>
+                  Para más información sobre nuestros servicios, por favor visite las diferentes secciones de nuestro sitio web o contáctenos directamente.
+                  </p>
+                {% endblock %} 
+            </div>  
+            <!-- end content --> 
+          </div>  
+          <!-- end container --> 
+        </div>  
+        <div id="footerWrapper"> 
+          <div id="footer"> 
+            {% block footer %} 
+              {{ render(controller('App\\Controller\\FooterController::footer')) }}
+            {% endblock %}
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </body>
+</html>
