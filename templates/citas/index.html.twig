@@ -4,7 +4,7 @@
     <h1>Lista de Citas</h1>
     <ul>
         {% for cita in citas %}
-            <li>{{ cita.nombre }} {{ cita.apellidos }} - {{ cita.dni }} - {{ cita.movil }}</li>
+            <li>{{ cita.nombre }} - {{ cita.dni }} - {{ cita.telefono }} - {{ cita.direccion }} - {{ cita.email }}</li>
         {% endfor %}
     </ul>
     <a href="{{ path('nueva_cita') }}">Nueva Cita</a>

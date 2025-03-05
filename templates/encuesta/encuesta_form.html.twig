@@ -1,0 +1,12 @@
+{% extends 'default.html.twig' %}
+
+{% block contenido %}
+    <form method="post">
+        {{ form_start(form) }}
+        {% for preguntas in form %}
+            <h3>{{ preguntas.vars.label }}</h3>
+            <div>{{form_widget(preguntas)}}</div>
+        {% endfor %}
+        {{ form_end(form) }}
+    </form>
+{% endblock %}

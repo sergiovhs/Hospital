@@ -58,7 +58,7 @@ class BolsaController extends AbstractController
 			$entityManager->persist($demandante);
             $entityManager->flush(); 
           
-            return $this->render('inscripcionBolsa.html.twig');
+            return $this->render('Bolsa/bolsa.html.twig');
         }
         else
             return $this->render('form.html.twig', array('form' => $form->createView(),));

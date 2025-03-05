@@ -1,8 +1,8 @@
 {% extends 'default.html.twig' %}
 
 {% block contenido %}
+     <h1 style="margin-left: 10px;">Servicios</h1>
 
-    <h1>Servicios</h1>
     {% if not servicio is defined %}
         <ul>
             {% for servicio in servicios %}
@@ -13,7 +13,7 @@
         {% if textos is empty %}
             <p>No hay textos para este servicio.</p>
         {% else %}
-            <ul style="list-style-type: none; padding: 0;"> 
+           <ul style="list-style-type:none; padding: 0; margin-left: 10px;">
                 {% for texto in textos %}
                     <li>{{ texto.texto | raw }}</li>
                 {% endfor %}

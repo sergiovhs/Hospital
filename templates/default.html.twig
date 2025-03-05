@@ -1,3 +1,4 @@
+<!-- templates/default.html.twig -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -13,7 +14,8 @@
     <meta name="copyright" content="Your company" />
     <meta name="abstract" content="Site description here" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
-    <link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" />
+    <!-- <link id="theme" rel="stylesheet" type="text/css" href="style.css" title="theme" />-->
+	<link href="{{ asset('/css/style.css') }}" rel="stylesheet" type="text/css" />
   </head>
   <body> 
     <div id="wrapper"> 
@@ -27,8 +29,8 @@
             <!-- horizontal navigation -->  
             <div id="nav1"> 
               <ul>
-                {% block menu %}
-                  {{ render(controller('App\\Controller\\MenuController::menu')) }}
+                {% block menu%}
+                  {{render(controller('App\\Controller\\MenuController::menu'))}}
                 {% endblock %}
               </ul> 
             </div>  
@@ -36,17 +38,13 @@
             <!--  content -->  
             <div id="content" style="margin-top: 100px;"> 
                 {% block contenido %}
-                  <h1>Bienvenido a nuestro hospital</h1>
-                  <p>
-                  En nuestro hospital, nos dedicamos a proporcionar la mejor atención médica posible a nuestros pacientes. Nuestro equipo de profesionales está aquí para ayudarle con todas sus necesidades de salud.
-                  </p>
-                  <p>
-                  Ofrecemos una amplia gama de servicios médicos, desde consultas generales hasta tratamientos especializados. Nuestro objetivo es garantizar su bienestar y recuperación.
-                  </p>
-                  <p>
-                  Para más información sobre nuestros servicios, por favor visite las diferentes secciones de nuestro sitio web o contáctenos directamente.
-                  </p>
-                {% endblock %} 
+                  <h1>Bienvenido al Hospital Jose Planes</h1>
+                  
+                  <p>En el Hospital Jose Planes, nos enorgullecemos de ofrecer una atención médica de alta calidad a todos nuestros pacientes. Nuestro equipo de profesionales de la salud está comprometido a brindar un cuidado integral y personalizado.</p>
+                  <p>Nuestro hospital cuenta con instalaciones modernas y tecnología de punta para asegurar diagnósticos precisos y tratamientos efectivos. Desde consultas generales hasta especialidades médicas avanzadas, estamos aquí para atender todas sus necesidades de salud.</p>
+                  <p>Nos esforzamos por crear un ambiente acogedor y seguro para nuestros pacientes y sus familias. Su bienestar es nuestra prioridad, y trabajamos incansablemente para garantizar su recuperación y satisfacción.</p>
+                  <img src="https://www.quironsalud.com/embarazoymaternidad/es/hospitales/hospital-quironsalud-murcia.ficheros/1440149-HQSMurcia_cabecera.jpg" alt="Imagen del Hospital" style="width:100%; height:auto;">
+                {% endblock %}
             </div>  
             <!-- end content --> 
           </div>  
@@ -54,8 +52,8 @@
         </div>  
         <div id="footerWrapper"> 
           <div id="footer"> 
-            {% block footer %} 
-              {{ render(controller('App\\Controller\\FooterController::footer')) }}
+            {% block footer%} 
+              {{render(controller('App\\Controller\\FooterController::footer'))}}
             {% endblock %}
           </div> 
         </div> 

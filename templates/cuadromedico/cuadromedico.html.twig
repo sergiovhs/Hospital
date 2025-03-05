@@ -9,7 +9,7 @@
     </ul>
 
     {% if medicos is defined %}
-        <h2>Médicos especializados en {{especialidades[0].nombre}} </h2>
+        <h2>Médicos especializados en {{ especialidad.nombre }}</h2>
         {% if medicos is empty %}
             <p>No hay médicos para esta especialidad.</p>
         {% else %}

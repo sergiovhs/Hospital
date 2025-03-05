@@ -1,5 +1,6 @@
-<ul style="list-style-type:none">
-    {% for item in menus %}
-        <li><a href="{{ path(item.enlace) }}">{{ item.nombre }}</a></li>
-    {% endfor %}
-</ul>
+
+    <ul style="list-style-type:none">
+        {% for item in menus %}
+            <li><a href="{{ path(item.enlace) }}">{{ item.nombre }}</a></li>
+        {% endfor %}
+    </ul>

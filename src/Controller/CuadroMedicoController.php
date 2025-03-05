@@ -27,6 +27,7 @@ class CuadroMedicoController extends AbstractController
         return $this->render('cuadromedico/cuadromedico.html.twig', [
             'especialidades' => [$especialidad],
             'medicos' => $especialidad->getMedicos(),
+            'especialidad' => $especialidad
         ]);
     }
 }

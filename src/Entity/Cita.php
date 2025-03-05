@@ -14,7 +14,7 @@ class Cita
     private ?int $id = null;
 
     #[ORM\ManyToOne(inversedBy: 'citas')]
-    private ?especialidad $especialidad = null;
+    private ?Especialidad $especialidad = null;
 
     #[ORM\Column(length: 255)]
     private ?string $dni = null;
