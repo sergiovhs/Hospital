@@ -1,0 +1,11 @@
+{% extends 'default.html.twig' %}
+
+{% block contenido %}
+    <h1>Lista de Citas</h1>
+    <ul>
+        {% for cita in citas %}
+            <li>{{ cita.nombre }} {{ cita.apellidos }} - {{ cita.dni }} - {{ cita.movil }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('nueva_cita') }}">Nueva Cita</a>
+{% endblock %}
